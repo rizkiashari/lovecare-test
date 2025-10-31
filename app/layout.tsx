@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import { QueryProvider } from "@/components/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <QueryProvider>
+          <div className="relative min-h-screen bg-linear-to-br from-emerald-50 via-white to-sky-50 dark:from-black dark:via-zinc-950 dark:to-black">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.12),transparent_40%),radial-gradient(ellipse_at_bottom_left,rgba(56,189,248,0.12),transparent_40%)]"
+            />
+            <Header />
+            <main className="relative mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+              {children}
+            </main>
+          </div>
+        </QueryProvider>
       </body>
     </html>
   );
