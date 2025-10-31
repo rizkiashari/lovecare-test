@@ -5,18 +5,11 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="prose prose-zinc max-w-none dark:prose-invert">
-      <h1>About untuk Cerita kenapa saya membuat ini</h1>
-      <p>
-        Ini adalah demo kecil yang dibangun dengan Next.js App Router untuk
-        menjelajahi Rick & Morty API. Tujuannya adalah arsitektur yang bersih
-        dengan pemisahan business logic dan UI, pengambilan data yang cepat,
-        layout responsif, dan UX yang baik dengan loading states.
-      </p>
-
+      <h1>About</h1>
       <h2>Arsitektur</h2>
       <p>
-        Proyek ini mengikuti prinsip Clean Architecture dengan pemisahan concern
-        yang jelas:
+        Dalam test ini menggunakan sistem clean code arsitektur yang dimana akan
+        memisahkan ui & bussiness logic, berikut ini:
       </p>
       <ul>
         <li>
@@ -45,13 +38,20 @@ export default function AboutPage() {
         </li>
       </ul>
 
-      <h2>Keputusan Teknis</h2>
+      <p>
+        Menurut saya untuk hal ini sangat dibutuhin untuk mempermudah dibaca
+        oleh developer lain jika dibuat secara clean code.. untuk saat ini
+        menurut saya penggunaan ini lebih baik jika tidak dipisahkan antara
+        bussiness logic & UI
+      </p>
+
+      <h2>Secara Teknis</h2>
       <ul>
         <li>Next.js App Router dengan React untuk server-first rendering.</li>
         <li>TypeScript untuk type-safety dan maintainability.</li>
         <li>
           Tailwind CSS untuk styling yang cepat dan konsisten dalam layout
-          responsif.
+          responsif dan menurut saya tailwind lebih better
         </li>
         <li>
           Route-level loading UI menggunakan file <code>loading.tsx</code>.
